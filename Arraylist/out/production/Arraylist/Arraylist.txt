@@ -1,0 +1,62 @@
+import java.util.*;
+
+public class Test {
+    public static void main(String[] args) {
+        // Create an ArrayList of integers
+        ArrayList<Integer> list = new ArrayList<>();
+        // Add elements to the list
+        list.add(155);
+        list.add(1220);
+        list.add(1330);
+        list.add(125);
+        list.add(1);
+
+        // Print the list before sorting
+        System.out.println("Array List Before Sorting: " + list);
+        
+        // Sort the list in ascending order
+        Collections.sort(list);
+
+        // Print the list after sorting
+        System.out.println("Array List After Sorting: " + list);
+
+        // Prompt the user to enter a number to search for in the list
+        System.out.println("Enter the Number You Want to Search: ");
+        
+        // Create a Scanner object to read user input
+        Scanner sc = new Scanner(System.in);
+        
+        // Read the number from user input
+        int num = sc.nextInt();
+
+        // Check if the list contains the number entered by the user
+        if(list.contains(num)){
+            System.out.println(num+" is Present in the Array List");
+        }
+        else{
+            System.out.println(num+" is Not Present in the Array List");
+        }
+
+        // Print each element of the list
+        for(int i:list){
+            System.out.println(i);
+        }
+
+        // Prompt the user to enter a number to remove from the list
+        System.out.println("Enter the Number You Want to Remove: ");
+        
+        // Read the number from user input
+        int num1 = sc.nextInt();
+
+        // Check if the list contains the number entered by the user
+        if (list.contains(num1)) {
+            // Remove the first occurrence of the number from the list
+            list.remove(list.indexOf(num1));
+            
+            // Print the list after removing the number
+            System.out.println("Array List After Removing: " + list);
+        } else {
+            System.out.println(num1 + " is Not Present in the Array List");
+        }
+    }
+}        
